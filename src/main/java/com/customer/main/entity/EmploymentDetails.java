@@ -26,4 +26,54 @@ public class EmploymentDetails {
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
+	public Long getEmploymentId() {
+		return employmentId;
+	}
+
+	public void setEmploymentId(Long employmentId) {
+		this.employmentId = employmentId;
+	}
+
+	public String getEmploymentType() {
+		return employmentType;
+	}
+
+	public void setEmploymentType(String employmentType) {
+		this.employmentType = employmentType;
+	}
+
+	public String getCompanyName() {
+		return companyName;
+	}
+
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
+	}
+
+	public Double getMonthlyIncome() {
+		return monthlyIncome;
+	}
+
+	public void setMonthlyIncome(Double monthlyIncome) {
+		this.monthlyIncome = monthlyIncome;
+	}
+
+	public Integer getTotalExperience() {
+		return totalExperience;
+	}
+
+	public void setTotalExperience(Integer totalExperience) {
+		this.totalExperience = totalExperience;
+	}
+
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+    
+    
+
 }

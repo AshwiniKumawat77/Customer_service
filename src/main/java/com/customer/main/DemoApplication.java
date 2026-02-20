@@ -2,7 +2,9 @@ package com.customer.main;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableAsync;
 
+@EnableAsync  // Enable async processing for event publishing
 @SpringBootApplication
 public class DemoApplication {
 
