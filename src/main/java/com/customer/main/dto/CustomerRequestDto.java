@@ -17,8 +17,7 @@ import lombok.Setter;
 /**
  * Request DTO for creating/updating Customer (KYC registration for Home Loan).
  */
-@Getter
-@Setter
+
 @NoArgsConstructor
 public class CustomerRequestDto {
 

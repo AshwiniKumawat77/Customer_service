@@ -243,6 +243,12 @@ public class CustomerServiceImpl implements CustomerService {
     @Transactional(rollbackFor = Exception.class)
     @CacheEvict(cacheNames = CacheConfig.CACHE_CUSTOMERS, allEntries = true)
     public CustomerResponseDto createCustomer(CustomerRequestDto dto) {
+        if (dto == null) {
+            throw new IllegalArgumentException("CustomerRequestDto must not be null");
+        }
+        if (dto.getDateOfBirth() == null) {
+            throw new BusinessException("DATE_OF_BIRTH_REQUIRED", "Date of birth is required");
+        }
         log.info("createCustomer started | pan={}", MaskingUtil.maskPan(dto.getPanNumber()));
         validateAgeForHomeLoan(dto.getDateOfBirth());
 

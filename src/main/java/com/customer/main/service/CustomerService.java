@@ -23,7 +23,7 @@ public interface CustomerService {
      */
     CustomerResponseDto completeKyc(Long id, CustomerRequestDto dto);
 
-    @Deprecated(since = "1.0", forRemoval = false)
+   
     CustomerResponseDto createCustomer(CustomerRequestDto dto);
 
     CustomerResponseDto updateCustomer(Long id, CustomerRequestDto dto);

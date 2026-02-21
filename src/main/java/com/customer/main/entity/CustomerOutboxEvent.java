@@ -24,10 +24,11 @@ public class CustomerOutboxEvent {
     private String payload;      // JSON
 
     private String status;       // NEW / SENT / FAILED
-    
+
     private Integer retryCount = 0;
 
     private LocalDateTime createdAt;
+    private LocalDateTime processedAt;  // when event was sent to Kafka
 
     public CustomerOutboxEvent() {}
     
@@ -98,7 +99,11 @@ public class CustomerOutboxEvent {
 		this.retryCount = retryCount;
 	}
 
-	
+	public LocalDateTime getProcessedAt() {
+		return processedAt;
+	}
 
-
+	public void setProcessedAt(LocalDateTime processedAt) {
+		this.processedAt = processedAt;
+	}
 }
